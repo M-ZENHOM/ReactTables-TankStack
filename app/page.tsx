@@ -1,113 +1,137 @@
-import Image from 'next/image'
+import { DataTable } from "@/components/users/data-table";
+import { columns } from "../components/users/columns";
+
+
+
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    <div className="container mx-auto py-10">
+      <DataTable columns={columns} data={data} />
+    </div>
   )
 }
+
+
+const data = [
+  {
+    "id": "728ed52f",
+    "name": "Terry Smitham",
+    "email": "atuny0@sohu.com",
+    "lastSeen": "Now"
+  },
+  {
+    "id": "45a6b3d1",
+    "name": "Alice Johnson",
+    "email": "alice.johnson@example.com",
+    "lastSeen": "5 minutes ago"
+  },
+  {
+    "id": "9c5e2787",
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "lastSeen": "1 hour ago"
+  },
+  {
+    "id": "f8d04a9e",
+    "name": "Emily Brown",
+    "email": "emily.brown@example.com",
+    "lastSeen": "2 hours ago"
+  },
+  {
+    "id": "61b0c358",
+    "name": "Michael Wilson",
+    "email": "michael.wilson@example.com",
+    "lastSeen": "3 hours ago"
+  },
+  {
+    "id": "6e894c1d",
+    "name": "Sophia Martinez",
+    "email": "sophia.martinez@example.com",
+    "lastSeen": "4 hours ago"
+  },
+  {
+    "id": "19cf75b2",
+    "name": "David Taylor",
+    "email": "david.taylor@example.com",
+    "lastSeen": "5 hours ago"
+  },
+  {
+    "id": "82c14f79",
+    "name": "Olivia Anderson",
+    "email": "olivia.anderson@example.com",
+    "lastSeen": "6 hours ago"
+  },
+  {
+    "id": "3f6d8a7a",
+    "name": "James Wilson",
+    "email": "james.wilson@example.com",
+    "lastSeen": "7 hours ago"
+  },
+  {
+    "id": "cde0a6e7",
+    "name": "Ava Garcia",
+    "email": "ava.garcia@example.com",
+    "lastSeen": "8 hours ago"
+  },
+  {
+    "id": "15b92f46",
+    "name": "William Miller",
+    "email": "william.miller@example.com",
+    "lastSeen": "9 hours ago"
+  },
+  {
+    "id": "a6e2d1c8",
+    "name": "Emma Hernandez",
+    "email": "emma.hernandez@example.com",
+    "lastSeen": "10 hours ago"
+  },
+  {
+    "id": "87f263d9",
+    "name": "Liam Martinez",
+    "email": "liam.martinez@example.com",
+    "lastSeen": "11 hours ago"
+  },
+  {
+    "id": "4a50133c",
+    "name": "Mia Jackson",
+    "email": "mia.jackson@example.com",
+    "lastSeen": "12 hours ago"
+  },
+  {
+    "id": "b56f7c19",
+    "name": "Benjamin Adams",
+    "email": "benjamin.adams@example.com",
+    "lastSeen": "13 hours ago"
+  },
+  {
+    "id": "fe41e50d",
+    "name": "Charlotte Clark",
+    "email": "charlotte.clark@example.com",
+    "lastSeen": "14 hours ago"
+  },
+  {
+    "id": "72a851e2",
+    "name": "Daniel Wright",
+    "email": "daniel.wright@example.com",
+    "lastSeen": "15 hours ago"
+  },
+  {
+    "id": "e8f4acab",
+    "name": "Harper Davis",
+    "email": "harper.davis@example.com",
+    "lastSeen": "16 hours ago"
+  },
+  {
+    "id": "35d49724",
+    "name": "Alexander Lee",
+    "email": "alexander.lee@example.com",
+    "lastSeen": "17 hours ago"
+  },
+  {
+    "id": "efc6a9d3",
+    "name": "Ella Harris",
+    "email": "ella.harris@example.com",
+    "lastSeen": "18 hours ago"
+  }
+]
